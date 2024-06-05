@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Tabelas, div's e formulários</title>
+    
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            position:absolute;
+            background-color: yellowgreen;
+        }
+        .main{
+            margin: 10px 10px;
+            position: relative;
+            top: 100%;
+            left: 100%;
+            text-align: center;
+        }
+        .dados{
+            width: 500px;
+            border: 1px solid cyan;
+            margin-top: 10px;
+            margin-left:10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Aqui há uma div, que contém uma tabela.</h1>
+        <table class="dados">
+            <tr>
+                <td>Nome</td>
+                <td>Cargo</td>
+                <td>Idade</td>
+            </tr>
+            <tr>
+                <td>Gabriel</td>
+                <td>Estudante</td>
+                <td>18 anos</td>
+            </tr>
+        </table>
+    </div>
+    <div class="main">
+        <form action="">
+            <label for="fname">Nome:</label>
+            <input type="text" value="Gabriel">
+            <input type="email" value="digite seu e-mail">
+            <input type="password" name="password" value="12123">
+            <input type="button" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

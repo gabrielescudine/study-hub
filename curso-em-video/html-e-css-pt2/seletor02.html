@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Pseudo-classes</title>
+    <style>
+        *{font-family: Arial, Helvetica, sans-serif;}
+       div{
+            display:inline-block;
+            width: 300px;
+            height: 300px;
+            background-color:#cccccc;
+            border: 1px solid black;
+            text-align: center;
+        }
+        div:hover{
+            text-decoration:underline;
+            font-weight:bolder;
+        }
+        .d1:hover{
+            background-color:rgb(250, 51, 51);
+        }
+        .d2:hover{
+            background-color:rgb(6, 204, 6);
+        }
+        .d3:hover{
+            background-color:rgb(71, 71, 248);
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes em CSS</h1>
+    <div class="d1">01</div>
+    <div class="d2">02</div>
+    <div class="d3">03</div>
+</body>
+</html>

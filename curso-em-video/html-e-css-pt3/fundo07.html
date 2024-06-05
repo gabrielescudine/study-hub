@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Centralização Vertical</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            position:relative;
+            width:769px;
+            height:600px;
+            background-image:url('img/target001.png');
+            background-size:100% 100%;
+            background-color:blue;
+            padding:20px;
+            margin:5% auto;
+        }
+        .box{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            width:200px;
+            height:200px;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <article class="box">
+
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.432);
+}
+
+.table-principal{
+    display:table;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.table-row{
+    display:table-row;
+    text-align: center;
+}
+
+.table-cel{
+    display:table-cell;
+    font-size:1.5em;
+    border:1px solid #ccc;
+    box-shadow: 5px 5px 5px #000000a4;
+}

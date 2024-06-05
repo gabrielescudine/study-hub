@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* Importando fonte diretamente do site do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+/* Importando fonte baixada no computador */
+@font-face{
+    font-family:"Fonte Customizada";
+    src: url(../fonts/NotoSansPahawhHmong-Regular.ttf) format("truetype");
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+
+.header{
+    font-family: 'Whisper', cursive;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main{
+    font-family:"Fonte Customizada";
+    font-weight:100;
+}
+
+.main .texto{
+    font-family:Arial;
+    font-weight:900;
+}
+
+.main h1{
+    font-weight:100 !important;
+}

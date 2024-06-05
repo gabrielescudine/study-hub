@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/icon-html.ico">
+    <title>Arrays e Objetos - JS</title>
+</head>
+<body>
+    
+
+<script>
+
+    window.onload = function(){
+    
+    //Declarando uma lista do tipo Array
+        var nome = [];
+        nome[0] = 'José';
+        nome[1] = 'Isso é um Array';
+        nome[2] = 'Gabriel';
+        nome[4] = 'É possível indicar o número que quiser!';
+
+        // alert(nome[1] + '\n' + nome[4]);
+
+    //Declarando um Objeto
+        var animal = {};
+        animal.nome = [];
+        animal.peso = '56kg';
+        animal.idade = 504;
+
+        animal.nome[0] = 'Cachorro';
+        animal.nome[1] = 'Gato';
+        animal.nome[2] = 'Gambá';
+        animal.nome[3] = 'Ratazana';
+
+        // alert('O ' + animal.nome[0] + ' é um animal ' + 'que possui ' + animal.peso + ' e tem uma idade de ' + animal.idade + ' anos.');
+
+        const dadosPessoais = {
+            nomePessoal: 'Nome: Gabriel',
+            idade: 'Idade: ' + 19,
+            telefone: 'Tel: ' + 21967002626,
+            endereco: 'Endereço: Rua da Paz, 28',
+            identificador: 'RG: ' + 261903082
+        }
+
+        // alert(dadosPessoais.nomePessoal + '\n' + dadosPessoais.idade + '\n' + dadosPessoais.telefone);
+        console.log(typeof(dadosPessoais.identificador));
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    height:100%;
+}
+.center{
+    max-width:1200px;
+    padding: 1% 2%;
+    margin: 0 auto;
+}
+.clear{clear:both;}
+
+header{
+    width:100%;
+    background-color:#3A599A;
+    height:8%;
+}
+
+header .center h2{
+    float:left;
+    color:White;
+    font-size:2em;
+    font-weight: 500;
+}
+
+header .center form .form-element > label{
+    color:white;
+
+}
+.form-login{
+    float:right;
+}
+
+.form-element{
+    display:inline-block;
+}
+
+.form-element input[type="email"],.form-element input[type="password"]{
+    padding: 1.5%;
+    border-radius: 3px;
+    border:1px solid #8d8d8d;
+    outline:0;
+}
+input[type="text"],input[type="email"],input[type="password"]:focus{
+    outline:0;
+}
+
+.form-element input[type="submit"]{
+    color:white;
+    padding:5px;
+    margin-left:-50%;
+    border:1px solid #273b68;
+    background-color: #4362AC;
+    cursor: pointer;
+}
+
+.form-element input[type="submit"]:hover{
+    background-color: #2a427a;
+    transition-duration: 1s;
+}
+
+
+.section-01{
+    width:100%;
+    background-color:#F2F3F9;
+    padding: 2%;
+}
+
+.section-01 .center > h3{
+    color:#51565D;
+    width: 50%;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    padding-bottom:1%;
+}
+
+.img-pessoas{
+    width:70%;
+    float:left;
+}
+
+.section-01 .img-pessoas img{
+    max-width:80%;
+}
+
+.section-form{
+    width:30%;  
+    float:left;
+}
+
+.section-form h2{
+    font-size: 2em;
+    padding: 1.5%;
+}
+.section-form p{
+    font-size: 1.2em;
+    padding: 1.5%;
+}
+
+.w-50{
+    width:50%;
+    float:left;
+    padding: 0 5px;
+}
+.w-100{
+    width:100%;
+    float:left;
+}
+
+.section-form input[type="text"], .section-form input[type="email"], .section-form input[type="password"]{
+    width:100%;
+    height:40px;
+    font-size:1.2em;
+    margin: 1.5%;
+    padding: 0 20px 0 5px;
+    border-radius: 3px;
+    border:1px solid #8d8d8d;
+    outline:0;    
+}
+
+.section-form input[type="submit"]{
+    width:100%;
+    max-width: 200px;
+    color:white;
+    padding:2% 10%;
+    border-radius: 5px;
+    border:1px solid #75b85c;
+    background-color: #5E944B;
+    cursor: pointer;
+    font-size:1.3em;
+}
+
+.section-form input[type="submit"]:hover{
+    background-color: #436935;
+    transition-duration: 1s;
+}
+
+.w-100 h3{
+    margin: 10px 0 5px 0;
+}
+
+.w-100 select.nascimento{
+    float:left;
+    padding:2%;
+    margin-bottom: 10px;
+}
+
+.input-radio{
+    width: auto !important;;
+    float:left;
+    margin: 10px 10px;
+}
+
+.input-radio h3{
+    font-variant: normal;
+    display: inline-block;
+}
+
+.rodape{
+    padding:30px;
+}
+
+.rodape ul{    
+    padding-bottom:10px;
+    border-bottom: 1px solid #737373;
+}
+
+.rodape ul li{
+    display:inline-block;
+    list-style-type: none;
+    padding: 0 8px 0 8px;
+    font-size: 13px;
+}
+
+.rodape ul li a{
+    text-decoration:none;
+}
+
+.rodape ul li a:hover{
+    text-decoration: underline;
+}
+
+.selected-lang{
+    color:#919191;
+}
+
+.rodape ul.outros{
+    border: 0;
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        width:100%;
+        height:auto;
+        padding:2% 0;
+    }
+
+    header h2{
+        float:none;
+        width:100%;
+        text-align:center;
+    }
+
+    .form-element{
+        float:none;
+    }
+
+    form.form-login{
+        float:none;
+        display:inline-block;
+        width:100%;
+        text-align:center;
+    }
+
+    label{
+        display:block;
+        margin-bottom: 5px;
+    }
+
+    .form-element input[type="submit"]{
+        color:white;
+        padding:2% 10%;
+        margin-left:0;
+        border:1px solid #273b68;
+        background-color: #4362AC;
+        cursor: pointer;
+    }
+
+    .form-login .form-element{
+        margin:10px 0;
+        display: block;
+    }
+
+    .section-01 .center > h3, .img-pessoas{
+        display:none;
+    }
+
+    .section-form{
+        width:100%;
+    }
+
+    .section-form input[type="submit"]{
+        max-width: 100%;
+    }
+}

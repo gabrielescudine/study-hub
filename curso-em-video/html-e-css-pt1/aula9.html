@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e Âncora em HTML5</title>
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Usando Links Externos</h1> <!--Para target: existe o _self(padrão), _top, _parent// Para atributo rel: next, prev, author, external, nofollow-->
+    <p>Este <a href="https://youtube.com.br">link</a> irá para o Youtube e a página irá sumir</p>
+    <p>Este <a href="https://www.facebook.com" target="_blank" rel="external">link</a> irá para o Facebook e abrirá outra página!</p>
+    <h2>Também é possível colocar links em imagens</h2>
+    <a href="https://w3schools.com" target="_blank" rel="external"><img src="img/html5-200.png" alt="HTML ICON"></a>
+
+    <h1>Links Internos</h1>
+    <p>Esta é a primeira página do documento. Clicando <a href="aula4.html" rel="next">aqui</a>, você irá para a segunda página</p>
+    <p>Você também pode ir para a terceira página, se desejar! Clique no emoji <a href="aula2.html" rel="next">&#x1F913;</a>.</p>
+    <p>Visite o nosso patrocinador em <a href="https://www.youtube.com" target="_blank" rel="nofollow">&#x1F596;</a></p>
+    <p>&reg; &uarr;</p>
+    <h1>Links para Download</h1>
+    <h2>Detalhe: se quiser que baixe, use o parâmetro download e type; caso só queira que abra, não precisa desses parâmetros</h2>
+    <ul>
+        <li><a href="livro/16 - Modelo de Caixas.pdf" download="16 - Modelo de Caixas.pdf" type="application/pdf">Baixe o livro em PDF</a></li>
+        <li><a href="livro/16 - Modelo de Caixas.zip" download="16 - Modelo de Caixas.zip" type="application/zip">Baixe o mesmo livro em ZIP</a></li>
+        <li><a href="img/html5.png" download="html5.png" type="image/png">Uma foto qualquer para download!</a></li>
+    </ul>
+</body>
+</html>

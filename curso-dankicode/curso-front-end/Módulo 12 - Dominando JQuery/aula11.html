@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Menu c/ Scroll - JQuery</title>
+    
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html,body{
+            height:100%;
+        }
+
+        nav{
+            z-index: 1;
+            width:100%;
+            position:fixed;
+            padding:20px 0;
+            text-align: center;
+            background-color:#ccc;
+        }
+
+        nav ul li{
+            display:inline-block;
+        }
+
+        nav li:first-child a{
+            border-bottom:2px solid #222222;
+        }
+
+        nav a{
+            text-decoration: none;
+            color:black;
+            padding:0 5px;
+            font-size: 24px;
+        }
+
+        .center{
+            position: relative;
+            top:60px;
+            height:100%;
+        }
+
+        .sessao{
+            min-height:100%;
+            padding:30px 2%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="home" href="">Home</a></li>
+            <li><a class="contato" href="">Contato</a></li>
+            <li><a class="sobre" href="">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="center">
+        <section target="home" class="sessao">
+            <h1>Página Home</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatum iste fugiat ab aliquid minus? Facere voluptate aspernatur id dolore! Atque minus modi hic explicabo enim consequatur unde perferendis ipsam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, iusto possimus pariatur dolores vero commodi tempore magnam quia! Totam animi exercitationem delectus quia dolores rerum veniam soluta nobis est distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem architecto culpa error modi. Odio veritatis maiores quis cumque molestiae. Ratione deserunt praesentium, sunt in quisquam voluptates voluptatem autem ducimus culpa. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti pariatur maxime aliquam quaerat modi itaque cum doloribus, repellat ipsum! Ad harum alias ducimus numquam repellendus exercitationem aliquam provident asperiores.</p>
+        </section>
+
+        <section target="contato" class="sessao">
+            <h1>Página Contato</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatum iste fugiat ab aliquid minus? Facere voluptate aspernatur id dolore! Atque minus modi hic explicabo enim consequatur unde perferendis ipsam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, iusto possimus pariatur dolores vero commodi tempore magnam quia! Totam animi exercitationem delectus quia dolores rerum veniam soluta nobis est distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem architecto culpa error modi. Odio veritatis maiores quis cumque molestiae. Ratione deserunt praesentium, sunt in quisquam voluptates voluptatem autem ducimus culpa.</p>
+        </section>
+
+        <section target="sobre" class="sessao">
+            <h1>Página Sobre</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo voluptatum iste fugiat ab aliquid minus? Facere voluptate aspernatur id dolore! Atque minus modi hic explicabo enim consequatur unde perferendis ipsam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, iusto possimus pariatur dolores vero commodi tempore magnam quia! Totam animi exercitationem delectus quia dolores rerum veniam soluta nobis est distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem architecto culpa error modi. Odio veritatis maiores quis cumque molestiae. Ratione deserunt praesentium, sunt in quisquam voluptates voluptatem autem ducimus culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis atque porro officiis ad, esse id at velit, officia laboriosam iusto, consequatur placeat deleniti nobis eos minima voluptas quo suscipit qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eum adipisci quia nam voluptatum corrupti repellendus ex odit cum? Temporibus, voluptatum? Deleniti atque hic aliquid, iste sed reiciendis. Aperiam, non!</p>
+        </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/aula11.js"></script>
+</body>
+</html>
