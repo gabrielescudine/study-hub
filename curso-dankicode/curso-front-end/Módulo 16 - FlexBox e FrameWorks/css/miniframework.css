@@ -1,0 +1,65 @@
+/* Classes Gerais -- Framework */
+
+.gold{
+    background-color:gold;
+}
+
+.light-blue{
+    background-color:#00A3D9;
+}
+
+.white{
+    color:#fff;
+}
+
+.center{
+    width:100%;
+}
+
+.flex{
+    display:flex;
+    max-width:960px;
+    padding:0 2%;
+    margin:0 auto;
+    flex-wrap: wrap;
+}
+
+.w33{
+    width:33.3%;
+}
+
+.w50{
+    width:50%;
+}
+
+.w100{
+    width:100%;
+}
+
+.left{
+    text-align:left;
+}
+
+.right{
+    text-align: right;
+}
+
+.center{
+    text-align: center;
+}
+
+.logo{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:768px){
+    .w33, .w50{
+        width:100%;
+    }
+    .left,.right{
+        text-align: center;
+    }
+    .logo{
+        padding-bottom:10px;
+    }
+}
