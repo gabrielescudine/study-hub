@@ -1,0 +1,46 @@
+.themed-grid-col {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+  border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+.themed-container {
+  padding: .75rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+  border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+header{
+  padding:20px 0;
+  background-color:#3D0A91;
+}
+
+header .logo{
+  color:#fff;
+  font-weight: 400;
+}
+
+.menu-desktop{
+  position:relative;
+  top:8px;
+}
+
+.menu-desktop li{
+  display:inline-block;
+}
+
+.menu-desktop a{
+  text-decoration: none;
+  color:#fff;
+  padding: 0 10px;
+}
+
+.menu-mobile{
+  display:none;
+}
+
+@media screen and (max-width:580px){
+
+}
