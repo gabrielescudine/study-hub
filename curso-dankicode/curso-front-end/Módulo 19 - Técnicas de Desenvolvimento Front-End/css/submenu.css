@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height:100%;
+    background-color: #ccc;
+}
+
+.center{
+    margin:0 auto;
+    max-width: 1440px;
+    width:100%;
+    padding:0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear{
+    clear:both;
+}
+
+header{
+    background-color:#1976d2;
+    padding:1%;
+}
+
+.logo{
+    color:#fff;
+}
+
+nav.desktop-menu > ul{
+    /* position:relative; */
+    list-style-type: none;
+}
+
+nav.desktop-menu > ul > li{
+    position:relative;
+    top:0;
+    left:0;
+    display: inline-block;
+    margin:5px 5px 0 5px;
+}
+
+ul.submenu-desktop{
+    display:none;
+    position: absolute;
+    right:0;
+    top:20px;
+    width:200px;
+    padding:15px;
+    background-color:#01479b;
+    list-style-position: inside;
+    list-style-type: none;
+    border-radius: 3px;
+}
+
+ul.submenu-desktop li{
+    margin: 5px 0;
+}
+
+nav.desktop-menu > ul > li:hover > ul.submenu-desktop{
+    display:block;
+}
+
+nav.desktop-menu a{
+    text-decoration: none;
+    color:#fff;
+}
+
+nav.mobile-menu{
+    display:none;
+}
+
+nav.mobile-menu > i{
+    color:#fff;
+    font-size: 24px;
+    margin:3px 0;
+    cursor: pointer;
+}
+
+nav.mobile-menu > ul{
+    display: none;
+    position:absolute;
+    left:0;
+    top:40px;
+    width:100%;
+    background-color:#fff;
+    list-style-type: none;
+    padding:1% 2%;
+}
+
+nav.mobile-menu > ul > li{
+    margin:8px 0;
+}
+
+nav.mobile-menu > ul > li:hover > a:not(.submenu-mobile){
+    text-decoration: underline;
+}
+
+ul.submenu-mobile li:hover > a{
+    text-decoration: underline;
+}
+
+nav.mobile-menu a{
+    text-decoration: none;
+    color:#000;
+}
+
+ul.submenu-mobile{
+    list-style-type: none;
+    padding:8px 15px;
+}
+
+ul.submenu-mobile li{
+    margin: 5px 0;
+}
+
+@media screen and (max-width:1280px){
+    nav.desktop-menu{
+        display:none;
+    }
+
+    nav.mobile-menu{
+        display:block;
+    }
+}

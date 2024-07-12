@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/submenu.css">
+    <link rel="shortcut icon" href="img/icon-html.ico">
+    <title>SubMenu Responsivo - Início</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="center">
+            <div class="logo">
+                <h2>Logomarca</h2>
+            </div><!--Logo-->
+
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Serviço <i class="fa-solid fa-arrow-down"></i></a>
+                        <ul class="submenu-desktop">
+                            <li><a href="">Quiropraxia</a></li>
+                            <li><a href="">Acupuntura</a></li>
+                            <li><a href="">Fisioterapia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav><!--Desktop Menu-->
+
+            <nav class="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Serviço</a>
+                        <ul class="submenu-mobile">
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i> Quiropraxia</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i> Acupuntura</a></li>
+                            <li><a href=""><i class="fa-solid fa-angle-right"></i> Fisioterapia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div><!--Centralização-->
+    </header><!--Cabeçalho-->
+
+
+    <script src="https://kit.fontawesome.com/f79c55981d.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $('.mobile-menu i').click(function(){
+                $(this).parent().find('ul:not(.submenu-mobile)').slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>

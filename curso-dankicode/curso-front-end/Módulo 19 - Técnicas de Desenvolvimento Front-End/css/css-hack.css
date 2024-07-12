@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Body costuma pegar p/ todos os navegadores (incluindo Safari) */
+html,body{
+    height:100%;
+    background-color: yellow;
+}
+
+/* Pega apenas no Microsoft Edge/Internet Explorer */
+_:-ms-lang(x), body{
+    background-color:blue;
+}
+
+/* Pega apenas para o Mozilla */
+@-moz-document url-prefix(){
+    body{
+        background-color:red;
+    }
+}
+
+.center{   
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1440px;
+    margin:0 auto;
+    padding:0 2%;
+}
+
+.clear{
+    clear:both;
+}
+
