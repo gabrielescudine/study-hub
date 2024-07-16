@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Session And Local Storage - Início</title>
+</head>
+<body>
+
+    <script>
+        //DOM = DOCUMENT OBJECT MODEL
+
+        window.onload = function(){
+
+            if(typeof(Storage) !== 'undefined'){
+                alert("Seu navegador suporta Web Storage.");
+                initializeStorage();
+            }else{
+                alert("Seu navegador não suporta Web Storage.");
+            }
+
+            function initializeStorage(){
+                if(sessionStorage.getItem('nome') !== null){
+                    alert("Olá, " + sessionStorage.nome + "! Seja bem-vindo de volta :)");
+                }else{
+                    alert("Olá, esta é a sua primeira visita a este site!");
+                    sessionStorage.nome = prompt("Digite seu nome: ");
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

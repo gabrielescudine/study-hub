@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Uso do ForEach - Início</title>
+</head>
+<body>
+
+    <script>
+        //DOM = DOCUMENT OBJECT MODEL
+        
+        let carrosIncriveis = [{
+                marca: 'Fiat',
+                modelo: 'Uno',
+                ano: 2000
+            },{
+                marca: 'Chevrolet',
+                modelo: 'Camaro',
+                ano: 2010
+            },{
+                marca: 'Ford',
+                modelo: 'Mustang',
+                ano: 2018
+            }]
+        // console.log(carrosIncriveis[2].marca)
+        
+        //For Each para Objetos
+        for(let n in carrosIncriveis){
+            //console.log(n)
+            console.log(carrosIncriveis[n].marca);
+        }
+
+        console.log("")
+
+        let marcaFamosa = [
+            'Boing',
+            'Airbus',
+            'Embraer',
+            'Ferrari'
+        ]
+
+        //Loop c/ for para arrays
+        for(let i = 0; i < marcaFamosa.length; i++){
+            console.log(marcaFamosa[i]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Orientação a Objetos - Início</title>
+</head>
+<body>
+
+    <script>
+        //DOM = DOCUMENT OBJECT MODEL
+        
+        let pessoaRandom = new infoPessoa('Gabriel', '19', function(){
+            alert(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+        })
+
+        let pessoaSecond = new infoPessoa('José', '29', 'Masculino', 'Teste');
+        
+        pessoaSecond.func();
+        console.log(pessoaRandom.nome);
+
+        //pessoaRandom.genero();
+        //infoPessoa('Gabriel','19');
+
+        function infoPessoa(nome, idade, genero, callback){
+            this.nome = nome;
+            this.idade = idade;
+            this.genero = genero;
+            this.callback = callback;
+
+            console.log(this.nome);
+            console.log(this.idade);
+
+            this.func = function(){
+                alert(this.callback);
+            }
+        }
+    </script>
+</body>
+</html>

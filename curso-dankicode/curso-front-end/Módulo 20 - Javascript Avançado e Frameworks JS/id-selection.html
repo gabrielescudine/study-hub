@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/id-selection.css">
+    <link rel="shortcut icon" href="img/icon-html.ico" type="image/x-icon">
+    <title>Estilizando via ID - Início</title>
+</head>
+<body>
+    <h1 id="main-text">Olá, </h1>
+    <div class="teste">
+        <p onclick="displayMessage()" class="paragrafo__1">Este é um parágrafo!</p>
+    </div>
+
+    <p>Parágrafo avulso</p>
+
+    <script>
+        //DOM = DOCUMENT OBJECT MODEL
+
+        function displayMessage(){
+            alert("clicado");
+        }
+        
+        function changeStyle(){
+            document.querySelector('h3').style.color = 'red';
+            document.querySelector('h3').style.backgroundColor = 'black';
+
+        }
+
+        window.onload = function(){
+            let el = document.getElementById('main-text');
+
+            el.innerHTML = el.innerHTML + 'Gabriel';
+
+            document.getElementById('main-text').style.color = 'blue';
+            el.style.fontSize = '2em';
+            el.style.fontWeight = 'bold';
+            el.style.textTransform = 'uppercase';
+            el.style.letterSpacing = '0.1em';
+            el.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
+            el.style.animationDelay = '1s';
+
+            //Neste caso, irá pegar o primeiro parágrafo que aparecer.
+            let elParagraph = document.querySelector('p');
+            elParagraph.style.backgroundColor = 'yellow';
+
+            //Já aqui, irá pegar todos os parágrafos do documento.
+            let elParagraphAll = document.querySelectorAll('p');
+            console.log(elParagraphAll)
+
+            //Para que todos os elementos sejam estilizados (seguindo o caso acima):
+            for(let i = 0; i < elParagraphAll.length; i++){
+                elParagraphAll[i].style.color = 'green';
+            }
+
+            //Adicionar um novo parágrafo no documento
+            let divTeste = document.querySelector('.teste');
+            divTeste.innerHTML = divTeste.innerHTML + '<h3 onmouseover="changeStyle()">Este é um H3 adicionado via JS</h3>'
+        }
+    </script>
+</body>
+</html>
