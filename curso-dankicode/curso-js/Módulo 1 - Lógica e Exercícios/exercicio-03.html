@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício #03 - Início</title>
+</head>
+<body>
+    <script>
+
+    //Exercício #03 - Calculadora dinâmica
+
+    let numeroInicial = parseInt(prompt("Digite o 1º número"));
+    
+    let sinalCalc = prompt("Digite o sinal da operação [+|-|*|/]");
+    validarSinal();
+    let numeroFinal = parseInt(prompt("Digite o 2º número"));
+    
+    switch(sinalCalc){
+        case "+":
+            let resultadoSoma = numeroInicial + numeroFinal;
+            console.log(resultadoSoma);
+            break;
+        case "-":
+            let resultadoSub = numeroInicial - numeroFinal;
+            console.log(resultadoSub);
+            break;
+        case "*":
+            let resultadoMulti = numeroInicial * numeroFinal;
+            console.log(resultadoMulti);
+            break;
+        case "/":
+            let resultadoDiv = numeroInicial / numeroFinal;
+            console.log(resultadoDiv);
+            break;
+        default:
+            console.log("Número inválido");
+    }
+
+    function validarNumeros(){
+        if(isNaN(numeroInicial) || isNaN(numeroFinal)){
+            alert("Digite apenas números!");
+            return false;
+        }
+        return true;
+    }
+
+    function validarSinal(){
+        while(sinalCalc != '+' && sinalCalc != '-' && sinalCalc != '*' && sinalCalc != '/'){
+            sinalCalc = prompt("Operador inválido. Digite o sinal da operação [+|-|*|/]");
+        }
+    }
+        
+    </script>
+</body>
+</html>

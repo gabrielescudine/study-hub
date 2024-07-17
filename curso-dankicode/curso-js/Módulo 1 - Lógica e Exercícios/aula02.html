@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - Início</title>
+</head>
+<body>
+    <script>
+        //Criando Funções
+
+        function somaNumeros(a,b){
+            return a + b;
+        }
+
+        let soma = somaNumeros(2,6);
+        console.log(soma);
+
+        (function(){
+            console.log("Testando esta forma de chamar a função.")
+        })();
+
+        let numerosRomanos = function(){
+            console.log("I - II - III - IV - V - VI - VII - VIII - IX - X");
+        }
+
+        numerosRomanos();
+    </script>
+</body>
+</html>
