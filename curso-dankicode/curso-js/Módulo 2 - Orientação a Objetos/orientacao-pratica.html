@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objetos PRÁTICA - JS</title>
+</head>
+<body>
+    <script>
+
+        function carrosModel(){
+            this.modelo = function(modelo){
+                console.log(modelo);
+            };
+            this.ano = '';
+        }
+
+        let carroBmw = new carrosModel();
+        carroBmw.modelo = 'BMW';
+        carroBmw.ano = 2018;
+
+        let carroMercedes =  new carrosModel();
+        carroMercedes.modelo('Mercedes');
+
+        function Pessoa(){
+            this.nome = 'Gabriel';
+            this.idade = 19;
+            this.printAltura = function(altura){
+                alert(altura)
+            }
+            this.returnAnimal = function(animal){
+                return animal;
+            }
+        }
+
+        let pessoa = new Pessoa();
+
+        function Animal(nome, peso){
+
+            this.nome = nome;
+            this.peso = peso;
+            this.raca = 'Maltês';
+
+            if (nome == undefined){
+                nome = 'Cachorro';
+            }
+
+            if (peso == undefined){
+                peso = '10kg';
+            }
+        }
+
+        let cachorro = new Animal('Rex', '10');
+        let animal = new Animal();
+
+        console.log(cachorro.nome)
+        console.log(pessoa.returnAnimal(animal).raca)
+
+    </script>
+</body>
+</html>

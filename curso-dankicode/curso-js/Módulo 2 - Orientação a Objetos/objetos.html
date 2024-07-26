@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo Objetos - JS</title>
+</head>
+<body>
+    <script>
+        let pessoa = [{
+            nome: 'Joel',
+            idade: 25,
+            altura: 1.75
+        },
+        {
+            nome: 'Maria',
+            idade: 30,
+            altura: 1.60
+        }];
+
+        function carrosModel(){
+            this.modelo = '';
+            this.ano = '';
+        }
+
+        let carroMercedes =  new carrosModel();
+        carroMercedes.modelo = 'Mercedes';
+        carroMercedes.ano = 2020;
+
+        let carroBmw = new carrosModel();
+        carroBmw.modelo = 'BMW';
+        carroBmw.ano = 2018;
+
+        console.log(`${pessoa[0].nome} + ${pessoa[1].nome}`);
+        console.log(`Modelo: ${carroMercedes.modelo}, Ano: ${carroMercedes.ano}`);
+        console.log(`Modelo: ${carroBmw.modelo}, Ano: ${carroBmw.ano}`);
+    </script>
+</body>
+</html>

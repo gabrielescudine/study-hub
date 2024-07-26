@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas - JS</title>
+</head>
+<body>
+    <script>
+        //let data = new Date();
+
+        //Dia do mês
+        //alert(data.getDate());
+        
+        //Pega o dia da semana (ex. 1 = segunda, 2 = terça)
+        //alert(data.getDay());
+
+        //Ano inteiro
+        //alert(data.getFullYear());
+
+        //alert(`${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`);
+
+        //Manipulando as datas: (month/day/year)
+        let dateMani = new Date('07/29/2024');
+        let secondDate = new Date('08/01/2024');
+
+        let difDate = (secondDate - dateMani) / (1000 * 3600 * 24);
+
+        alert(difDate);
+    </script>
+</body>
+</html>
