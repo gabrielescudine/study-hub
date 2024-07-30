@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando querySelector - JS</title>
+</head>
+<body>
+
+    <main>
+        <div class="testes">
+            <div class="testes__child"><p>Olá</p></div>
+        </div>
+
+        <div class="testes">
+            <div class="testes__child"><p>Olá 2</p></div>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function(){
+            let testeQuery = document.querySelectorAll('.testes .testes__child');
+            let el = document.querySelector('.testes .testes__child');
+
+            el.style.color = 'blue';
+
+            testeQuery[1].innerHTML = '<h1>Adição via querySelector</h1>' + testeQuery[1].innerHTML;
+        }
+    </script>
+</body>
+</html>

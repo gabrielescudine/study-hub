@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação via ID e Class / CSS - JS</title>
+</head>
+<body>
+
+    <main>
+        <div id="box">
+            <div id="box-child">
+                <div id="box-child__child"></div>
+            </div>
+        </div><!--Box-->
+
+        <div class="boxClass">
+            <div class="boxClass__child"></div>
+        </div>
+
+        <div class="boxClass">
+            <div class="boxClass__child"></div>
+        </div>
+
+        <div class="boxClass">
+            <div class="boxClass__child"></div>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function(){
+            let el = document.getElementById('box');
+            let el__child = document.getElementById('box-child');
+            let el__child__child = document.getElementById('box-child__child'); 
+
+            el.style.backgroundColor = 'red';
+            el.style.width = '200px'; 
+            el.style.height = '200px';
+            el.style.margin = '15% auto';  
+            el.style.position ='relative';  
+            
+
+            el__child.style.backgroundColor = 'blue';
+            el__child.style.width = '100px';
+            el__child.style.height = '100px';
+            el__child.style.position = 'absolute';
+            el__child.style.top = '50%';
+            el__child.style.left = '50%';
+            el__child.style.transform = 'translate(-50%, -50%)'; 
+
+            el__child__child.style.backgroundColor = 'green';
+            el__child__child.style.width = '50px';
+            el__child__child.style.height = '50px';
+            el__child__child.style.position = 'absolute';
+            el__child__child.style.top = '50%';
+            el__child__child.style.left = '50%';
+            el__child__child.style.transform = 'translate(-50%, -50%)';
+
+            let boxClass = document.getElementsByClassName('boxClass');
+            let boxClass__child = document.getElementsByClassName('boxClass__child');
+
+            for(let i = 0; i < boxClass.length; i++){
+                let boxClassRepeater = boxClass[i].style;
+
+                boxClassRepeater.backgroundColor = 'red';
+                boxClassRepeater.width = '200px'; 
+                boxClassRepeater.height = '200px';
+                boxClassRepeater.margin = '15% auto';  
+                boxClassRepeater.position ='relative';  
+                boxClassRepeater.borderRadius = '50%';
+            }
+
+            for(i = 0; i < boxClass__child.length; i++){
+                let boxClassChildRepeater = boxClass__child[i].style;
+
+                boxClassChildRepeater.backgroundColor = 'blue';
+                boxClassChildRepeater.width = '100px'; 
+                boxClassChildRepeater.height = '100px';  
+                boxClassChildRepeater.position ='absolute';  
+                boxClassChildRepeater.borderRadius = '50%';
+                boxClassChildRepeater.top = '50%';
+                boxClassChildRepeater.left = '50%';
+                boxClassChildRepeater.transform = 'translate(-50%, -50%)';
+            }
+        }
+    </script>
+</body>
+</html>

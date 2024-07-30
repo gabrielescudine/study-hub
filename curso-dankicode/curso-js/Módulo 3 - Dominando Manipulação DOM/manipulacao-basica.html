@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação DOM - JS</title>
+</head>
+<body>
+
+    <main>
+        <p>Olá Mundo 1!</p>
+        <p>Olá Mundo 2!</p>
+        <p>Olá Mundo 3!</p>
+        <p>Olá Mundo 4!</p>
+        <p>Olá Mundo 5!</p>
+    </main>
+
+    <script>
+        window.onload = function(){
+            // Pega os elementos com base na tag HTML
+            let p = document.getElementsByTagName('p');
+            // alert(p.length)
+            // alert(p[0].innerHTML);
+
+            for(let i = 0; i < p.length; i++){
+                p[i].innerHTML = p[i].innerHTML + ' Esta é a manipulação - ' + (i+1);
+            }
+        }
+    </script>
+</body>
+</html>

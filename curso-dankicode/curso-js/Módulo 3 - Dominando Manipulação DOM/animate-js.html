@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações - JS</title>
+</head>
+
+<style>
+    .box{
+        background-color: blue;
+        width:200px;
+        height:200px;
+        cursor:pointer;
+    }
+
+    .leftAnimation{
+        transition:1s;
+        width:600px;
+        cursor:auto;
+
+    }
+</style>
+<body>
+
+    <main>
+        <div class="box"></div>
+    </main>
+
+    <script>
+        window.onload = function(){
+            let box = document.querySelector('.box');
+
+            box.addEventListener('click',function(){
+                box.classList.add('leftAnimation');
+            })
+        }
+    </script>
+</body>
+</html>
