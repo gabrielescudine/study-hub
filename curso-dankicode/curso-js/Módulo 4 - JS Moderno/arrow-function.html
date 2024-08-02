@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function - JS</title>
+</head>
+
+<style>
+</style>
+<body>
+
+
+    <script>
+        //Arrow Function é uma forma moderna de declarar funções.
+        const funcModerna = (text, parameter)=>{
+            parameter(text);
+        }
+
+        funcModerna("Isto é uma Arrow Function",(text)=>{
+            console.log(text);
+        });
+
+        //Função tradicional
+        function funcTradicional() {
+            console.log("Aqui é uma função Tradicional");
+        }
+
+        funcTradicional();  
+    </script>
+</body>
+</html>

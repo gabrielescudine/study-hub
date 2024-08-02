@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises, Async e Await - JS</title>
+</head>
+
+<style>
+</style>
+<body>
+
+
+    <script>
+        //DOM = DOCUMENT OBJECT MODEL
+
+        //Promise representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante.
+        function testePromises(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    const erro = false;
+                    if(erro){
+                        reject("Ocorreu um erro..")
+                    }else{
+                        resolve("A promise foi resolvida com sucesso");
+                    }
+                },3000)
+            })
+        }
+
+        //testePromises().then(function(res){
+        //    alert(res);
+        //}).catch(function(err){
+        //    alert(err);
+        //})
+
+        //Async é uma forma mais elegante de retornar uma Promise.
+        async function testeAsync(){
+            //O await faz com que o código da função só seja executado após a execução da função que está sendo determinada
+            await testePromises();
+            alert("Async foi executado com sucesso");
+        }
+
+        testeAsync();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Lista de Filmes - JS</title>
+</head>
+
+<style>
+    .tituloFilme{cursor:pointer;}
+    .descriptionFilme{display:none;};
+</style>
+<body>
+
+    <section class="container-movies">
+
+    </section>
+
+    <script>
+        // API usada = https://developer.themoviedb.org/docs/getting-started
+
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=b201b3f859f5e27d62c965bfee25fa06&language=en-US&page=1', {
+            method: 'GET',
+        }).then(response => response.json()).then(function(json){
+            //Se está tudo ok, então console.log(json);
+
+            let container = document.querySelector('.container-movies');
+
+            json.results.map(function(val){
+                container.innerHTML += `
+                
+                    <div class = "tituloFilme">`+val.title+`
+                        <div class = "descriptionFilme">`+val.overview+`</div>
+                        <hr>
+                    </div>
+
+                `;
+            })
+
+            let titulos = document.querySelectorAll('.tituloFilme');
+            for(let i = 0; i < titulos.length; i++){
+                titulos[i].addEventListener('click', function(t){
+                    if(t.target.querySelector('.descriptionFilme').style.display == 'none'){
+                        t.target.querySelector('.descriptionFilme').style.display = 'block';
+                    }else{
+                        t.target.querySelector('.descriptionFilme').style.display = 'none';
+                    }
+                })
+            }
+        });
+
+    </script>
+</body>
+</html>

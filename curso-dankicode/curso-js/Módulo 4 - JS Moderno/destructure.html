@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructure - Rest e Spread - JS</title>
+</head>
+
+<style>
+</style>
+<body>
+
+
+    <script>
+        //Destructure faz com que seja possível descompactar diversos valores de arrays/objetos em variáveis distintas.
+        //Rest & Spread
+        //O Rest permite representar um número indefinido de argumentos na forma de um Array.
+        //O Spread permite expandir um Array ou um Objeto em um novo Array ou Objeto.
+
+        const arr = [20, 30, 40, 50, 90, 300, 100, 230, 70];
+        const [a, b, c, ...rest] = arr;
+        console.log(rest[5]);
+
+        const objNomes = [{
+            nome: 'Rafael'
+        },{
+            nome: 'Carlos'
+        }]
+
+        const objNome = [...objNomes,{
+            nome: 'Pedro'
+        }]
+
+        console.log(objNome);
+
+        function arrIdades(...idades){
+            console.log(idades[2]);
+            console.log(idades[4]);
+        }
+
+        arrIdades(25, 30, 35, 40, 45, 50);
+    </script>
+</body>
+</html>

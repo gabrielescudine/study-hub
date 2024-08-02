@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope - JS</title>
+</head>
+
+<style>
+</style>
+<body>
+
+
+    <script>
+        // Escopos locais servem para organizar o código, delimitando determinadas funcionalidades
+        // em blocos de código específicos.
+
+        // Escopo Global
+        let globalVar = "Escopo Global";
+
+        console.log(globalVar);
+
+        {
+            let localVar = "Escopo Local";
+            console.log(`É possível chamar o ${globalVar} e a ${localVar} aqui`);
+        }
+
+        console.log(`Porém não é possível chamar o escopo local aqui (dá erro)`)
+    </script>
+</body>
+</html>
