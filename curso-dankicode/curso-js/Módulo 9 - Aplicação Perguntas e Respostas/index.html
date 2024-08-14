@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Perguntas e Respostas - JS Puro</title>
+
+    <style>
+        @charset "UTF-8";
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html,body{
+            height:100%;
+        }
+
+        header{
+            text-align: center;
+            background-color:rgb(63, 111, 199);
+            color:#fff;
+            padding:40px 2%;
+        }
+
+        main{
+            width:100%;
+            max-width:1440px;
+            margin:0 auto;
+            padding:20px 2%;
+            text-align: center;
+        }
+
+        section.perguntas{
+            margin:10px 0;
+        }
+        
+        section.resposta{
+            margin:10px 0;
+        }
+
+        input[type=radio]{
+            margin:5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Perguntas e Respostas!</h1>
+    </header>
+
+    <main>
+        <section class="perguntas">
+            <h2>Qual é a melhor linguagem de programação?</h2>
+        </section>
+
+        <section class="resposta">
+            <form action="">
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">Java</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="correta" id="">
+                    <label for="pergunta__1">A que paga as suas contas</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">PHP</label>
+                </div>
+            </form>
+        </section>
+
+        <section class="perguntas">
+            <h2>Quais são os conhecimentos necessários para um front-end?</h2>
+        </section>
+
+        <section class="resposta">
+            <form action="">
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">HTML e CSS, somente</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">O que é front-end?</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="correta" id="">
+                    <label for="pergunta__1">HTML, CSS, 1 ling. de programação e frameworks</label>
+                </div>
+            </form>
+        </section>
+
+        <section class="perguntas">
+            <h2>Qual o intuito desta aplicação?</h2>
+        </section>
+
+        <section class="resposta">
+            <form action="">
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="correta" id="">
+                    <label for="pergunta__1">Só testar a lógica</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">Brincar</label>
+                </div>
+                <div class="resposta__single">
+                    <input type="radio" name="pergunta__2" value="incorreta" id="">
+                    <label for="pergunta__1">Nenhuma</label>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script>
+        window.onload = function(){
+            let inputEl = document.querySelectorAll('[type=radio]');
+
+            for(let i = 0; i < inputEl.length; i++){
+                inputEl[i].addEventListener('change',function(e){
+                    let markedAnswer = e.target.value;
+
+                    if(markedAnswer == 'correta'){
+                        //alert('Correto');
+                        let parentNode = e.target.parentNode;
+                        parentNode.style.backgroundColor = '#42f58d';
+
+                        let plusElement = parentNode.parentNode.querySelectorAll('[type=radio]');    
+
+                        for(let j = 0; j < plusElement.length; j++){
+                            plusElement[j].disabled = true;
+                        }
+                        
+                    }else if(markedAnswer == 'incorreta'){
+                        //alert('Errado');
+                        let parentNode = e.target.parentNode;
+                        parentNode.style.backgroundColor = '#f5424b';
+
+                        let plusElement = parentNode.parentNode.querySelectorAll('[type=radio]');    
+
+                        for(let j = 0; j < plusElement.length; j++){
+                            plusElement[j].disabled = true;
+                        }
+
+                        let correctAnswer = parentNode.parentNode.querySelector('[value=correta]');
+                        correctAnswer.parentNode.style.backgroundColor = "#42f58d";
+                        
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+</html>

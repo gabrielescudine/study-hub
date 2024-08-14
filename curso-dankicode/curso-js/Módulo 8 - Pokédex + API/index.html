@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokédex + API - JS Puro</title>
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <h2>App Pokédex!</h2>
+            <input type="text" name="" id="quantidade" placeholder="Digite a quantidade de pokémons..">
+        </div><!--Center-->
+    </header>
+
+    <main>
+        <div class="center">
+            
+            <section class="pokemon-box">
+
+            </section><!--Pokemon Box-->
+
+        </div><!--Center-->
+    </main>
+    <script>
+        window.onload = ()=>{
+            let quantidade = document.getElementById("quantidade");
+            quantidade.addEventListener('keyup', ()=>{
+                pegarPokemon(quantidade.value);
+            })
+            
+            pegarPokemon(9);
+
+            function pegarPokemon(quantidade){
+                fetch('https://pokeapi.co/api/v2/pokemon?limit='+quantidade).then(response => response.json()).then(allpokemon => {
+                    let pokemonInfo = [];
+
+                    allpokemon.results.map(function(val){
+                        fetch(val.url).then(response => response.json()).then(pokemonUrl => {
+                            pokemonInfo.push({
+                            nome: val.name,
+                            image: pokemonUrl.sprites.front_default,
+                        })
+
+                        if(pokemonInfo.length == quantidade){
+                            //Como é assíncrono, é necessário fazer essa verificação.
+                            //Se estiver tudo ok, irá aparecer os 10 objetos certinhos.
+                            //console.log(pokemonInfo)
+
+                            let pokemonBox = document.querySelector('.pokemon-box');
+                            pokemonBox.innerHTML = "";
+
+                            pokemonInfo.map(function(val){
+                                pokemonBox.innerHTML +=`
+                                <div class="pokemon-single">
+                                    <img src="`+val.image+`">
+                                    <p>`+val.nome+`</p>
+                                </div><!--Pokemon Single-->
+                                `;
+                            })
+                        }
+                        })
+                    })
+
+                    pokemonInfo.map(function(val){
+                        console.log(val.nome);
+                    })
+                });
+            }
+        }
+    </script>
+</body>
+</html>

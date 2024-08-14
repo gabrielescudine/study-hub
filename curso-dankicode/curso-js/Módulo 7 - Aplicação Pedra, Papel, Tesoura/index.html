@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Pedra, Papel ou Tesoura - JS Puro</title>
+
+    <style>
+        @charset "UTF-8";
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html,body{
+            height:100%;
+        }
+
+        header.titulo__jogo{
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            border-bottom:4px solid #ccc;
+            color: #fff;
+        }
+
+        .align__options{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .player__options, .enemy__options{
+            margin:30px 3%;
+            /* width:90%; */
+        }
+
+        .player__options img, .enemy__options img{
+            max-width:200px;
+            opacity: 0.5;
+            cursor:pointer;
+        }
+
+        section.resultado__jogo{
+            margin:30px 0;
+            font-variant:small-caps;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="titulo__jogo">
+        <h1>Pedra, papel ou tesoura</h1>
+    </header>
+
+    <main class="align__options">
+        <section class="player__options">
+            <h2>Escolha do jogador:</h2>
+            <div><img opt="pedra" src="img/rock.png" alt="Opção Pedra"></div>
+            <div><img opt="papel" src="img/paper.png" alt="Opção Papel"></div>
+            <div><img opt="tesoura" src="img/scisor.png" alt="Opção Tesoura"></div>
+        </section><!--Player Options-->
+        <section class="resultado__jogo">
+            <h2 class="resultado">Quem será o vencedor?</h2>
+        </section>
+        <section class="enemy__options">
+            <h2>Escolha do adversário:</h2>
+            <div><img opt="pedra" src="img/rock.png" alt="Opção Pedra"></div>
+            <div><img opt="papel" src="img/paper.png" alt="Opção Papel"></div>
+            <div><img opt="tesoura" src="img/scisor.png" alt="Opção Tesoura"></div>
+        </section><!--Enemy Options-->
+    </main><!--Align Options-->
+    <script src="js/functions.js"></script>
+</body>
+</html>
