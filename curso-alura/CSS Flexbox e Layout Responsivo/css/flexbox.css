@@ -1,0 +1,155 @@
+/* Config. Cabeçalho */
+
+nav.cabecalho__container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Config. Menu Lateral */
+
+.menu__container {
+
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    overflow:scroll;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 17px 20px 15px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: flex;
+}
+
+.menu__lista:nth-child(3), .menu__lista:nth-child(4){
+    flex-direction: column-reverse;
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Config. Vídeos */
+
+.videos__container{
+    display:flex;
+    flex-flow: row wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    gap:10px;
+}
+
+.videos__item{
+    width:280px;
+    height:303px;
+    flex-grow: 1;
+}
+
+/* Config. Seção Superior */
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 15px;
+    overflow-x: scroll;
+    /* z-index: 1; */
+}
+
+/* Config. Rodapé */
+
+.rodape__container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+/* Responsividade */
+
+@media screen and (max-width:1439px) {
+    .cabecalho__pesquisar__item {
+        display: none;
+    }
+
+    .menu__container {
+        top: 80px;
+        left: 0;
+        height: 100%;
+        width: 74px;
+    }
+
+    .menu__lista {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 15px;
+    }
+
+    .menu__lista li {
+        align-self: center;
+    }
+
+    .menu__itens {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: none;
+    }
+
+    .rodape__container {
+        justify-content: unset;
+    }
+}
+
+@media screen and (max-width:834px) {
+
+    .menu__container {
+        top: unset;
+        left: unset;
+        bottom: 0;
+        height: 74px;
+        width: 100%;
+    }
+
+    .menu__lista {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        gap:0;
+    }
+
+    .menu__lista li {
+        align-self: center;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: none;
+    }
+}
