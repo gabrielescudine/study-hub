@@ -1,0 +1,73 @@
+// Explicação sobre o parentNode, childNodes, nextElementSiblings, previousElementSibling:
+
+- Propriedade parentNode:
+
+A propriedade parentNode é utilizada para acessar o nó pai de um elemento no DOM. Por meio dela, podemos navegar pela árvore do DOM em direção ao nó pai do elemento atual.
+
+Considere o código HTML:
+
+"
+<div id="container">
+  <p>Este é um parágrafo</p>
+</div>
+"
+
+Agora, na parte do JS, pode-se utilizar da seguinte forma:
+
+"
+const paragraph = document.querySelector('p');
+const parentElement = paragraph.parentNode;
+
+console.log(parentElement.id); // Saída: "container"
+"
+
+- Propriedade childNodes:
+
+A propriedade childNodes é utilizada para acessar todos os nós filhos de um elemento no DOM. Ela retorna uma lista de nós, incluindo nós de texto e elementos HTML.
+
+Considerando o mesmo HTML do exemplo anterior, podemos usar o childNodes para obter todos os nós filhos do elemento com o ID "container":
+
+"
+const container = document.getElementById('container');
+const childNodes = container.childNodes;
+
+console.log(childNodes.length); // Saída: 1 (o nó de texto "\n  " é considerado um nó filho)
+console.log(childNodes[0].nodeName); // Saída: "#text"
+console.log(childNodes[1].nodeName); // Saída: "P"
+"
+
+- Propriedade nextElementSibling:
+
+A propriedade nextElementSibling permite acessar o próximo irmão (nó adjacente) de um elemento no DOM.
+
+Considere o seguinte código HTML:
+
+"
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+"
+
+Para acessar, via JS, fica da seguinte maneira:
+
+"
+const item1 = document.querySelector('li:first-child');
+const item2 = item1.nextElementSibling;
+
+console.log(item2.textContent); // Saída: "Item 2"
+"
+
+- Propriedade previousElementSibling:
+
+A propriedade previousElementSibling é semelhante ao nextElementSibling, mas permite acessar o irmão anterior (nó adjacente) de um elemento no DOM.
+
+Continuando o exemplo anterior, vamos usar o previousElementSibling para acessar o irmão anterior do elemento <li> que selecionamos:
+
+"
+const item3 = document.querySelector('li:last-child');
+const item2 = item3.previousElementSibling;
+
+console.log(item2.textContent); // Saída: "Item 2"
+"

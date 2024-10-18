@@ -1,0 +1,76 @@
+// Explicação sobre o addEventListener:
+
+-- O que é?
+
+O addEventListener é um método disponível para todos os elementos HTML e permite que registremos funções (callbacks) que serão chamadas quando um evento específico ocorrer.
+
+- Sintaxe:
+
+elemento.addEventListener(evento, callback), onde:
+> elemento: É o elemento HTML ao qual queremos associar o evento;
+> evento: É uma string que representa o tipo de evento que desejamos capturar;
+> callback: É a função que será chamada quando o evento ocorrer.
+
+-- Tipos de Eventos:
+
+- Evento de Click ('click'):
+
+Ocorrem quando o usuário clica em um elemento específico da página, como um botão, um link ou até mesmo em uma imagem. Podemos usar o evento click para executar ações quando o usuário interage com esses elementos. Veja o exemplo abaixo:
+
+"//HTML <button id="meuBotao">Clique aqui</button>
+
+const meuBotao = document.getElementById("meuBotao");
+meuBotao.addEventListener("click", function() {
+  alert("O botão foi clicado!");
+});"
+
+- Evento de Formulário ('submit'):
+
+Quando temos um formulário em nossa página, podemos usar o evento submit para capturar a submissão do formulário pelo usuário. Isso nos permite executar ações como validar os dados inseridos antes de enviá-los para o servidor. Veja o exemplo abaixo:
+
+"//HTML <form id="meuFormulario">
+//HTML     <input type="text" name="nome" />
+//HTML     <input type="submit" value="Enviar" />
+//HTML  </form>
+
+const meuFormulario = document.getElementById("meuFormulario");
+meuFormulario.addEventListener("submit", function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+  const nome = event.target.elements.nome.value;
+  alert(`O formulário foi enviado com o nome: ${nome}`);
+});"
+
+- Eventos de Teclado ('keyup', 'keydown', 'keypress'):
+
+Os eventos de teclado permitem que respondamos às ações do usuário no teclado, como pressionar ou soltar uma tecla específica. Veja o exemplo abaixo:
+
+Existem três principais tipos de eventos de teclado:
+
+> keydown: Ocorre quando uma tecla é pressionada;
+> keyup: Ocorre quando uma tecla é solta;
+> keypress: Ocorre quando uma tecla é pressionada e ainda não foi solta.
+
+"//HTML<input type="text" id="meuInput" />
+
+const meuInput = document.getElementById("meuInput");
+meuInput.addEventListener("keydown", function(event) {
+  console.log(`Tecla pressionada: ${event.key}`);
+});"
+
+- Eventos de Foco ('focus', 'blur'):
+
+Os eventos de foco são usados quando queremos capturar quando um elemento recebe ou perde o foco. O evento focus ocorre quando o elemento ganha o foco (por exemplo, quando clicamos em um campo de formulário), enquanto o evento blur ocorre quando o elemento perde o foco. Veja o exemplo abaixo:
+
+"//HTML <input type="text" id="meuCampo" />
+
+const meuCampo = document.getElementById("meuCampo");
+meuCampo.addEventListener("focus", function() {
+  console.log("Campo ganhou o foco.");
+});
+
+meuCampo.addEventListener("blur", function() {
+  console.log("Campo perdeu o foco.");
+});"
+
+Quando o usuário clicar no campo de texto, o evento focus será acionado e o código imprimirá no console a mensagem "Campo ganhou o foco.". Quando o usuário clicar fora do campo, fazendo-o perder o foco, o evento blur será acionado e o código imprimirá no console a mensagem "Campo perdeu o foco.".
+
