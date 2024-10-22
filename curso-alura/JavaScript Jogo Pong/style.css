@@ -1,0 +1,72 @@
+/* Definições gerais */
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Container do jogo */
+#jogo-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh; /* Altura do contêiner com espaço para o título */
+    position: relative;
+    z-index: 1; /* Certifique-se de que o jogo está acima da camada de fundo */
+}
+
+/* Animação de estrelas */
+@keyframes stars {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.star {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: stars 2s infinite alternate;
+}
+
+.star:nth-child(1) { width: 3px; height: 3px; top: 30%; left: 20%; animation-duration: 3s; }
+.star:nth-child(2) { width: 4px; height: 4px; top: 60%; left: 50%; animation-duration: 2s; }
+.star:nth-child(3) { width: 5px; height: 5px; top: 70%; left: 80%; animation-duration: 2.5s; }
+.star:nth-child(4) { width: 2px; height: 2px; top: 15%; left: 30%; animation-duration: 3.5s; }
+.star:nth-child(5) { width: 6px; height: 6px; top: 40%; left: 65%; animation-duration: 1.5s; }
+
+/* Adicionando um fundo animado com estrelas */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Camada de fundo */
+    pointer-events: none; /* Para garantir que não interfira na interação */
+}
+
+/* Estilo para o jogo */
+#jogo-container canvas {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
