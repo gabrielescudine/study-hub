@@ -1,0 +1,20 @@
+/* Cores Padrões da Aplicação */
+
+:root {
+
+    /* Cores principais */
+    --azulPrincipal: #6278F7;
+    --verdePrincipal: #95FFD4;
+    --cinzaPrincipal: #f2f2f2;
+}
+
+/* Classes a serem utilizadas */
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 0 2%;
+    /* height: 100%; */
+}

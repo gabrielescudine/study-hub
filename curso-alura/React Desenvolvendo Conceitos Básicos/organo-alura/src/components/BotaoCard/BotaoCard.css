@@ -1,0 +1,20 @@
+@import url('../../reset.css');
+@import url('../../standard.css');
+
+.btnCriarCard {
+    width: 167px;
+    line-height: 80px;
+    margin: 32px 0;
+    text-align: center;
+    background-color: var(--azulPrincipal);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.btnCriarCard:hover {
+    transition-duration: 0.5s;
+    color: #95FFD4;
+}
